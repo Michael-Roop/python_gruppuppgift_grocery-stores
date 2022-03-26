@@ -8,10 +8,14 @@ Del 1 går ut på att samla ihop information från loggfiler från varje butik o
 
 Del 2 går ut på att läsa CSV-filen för att besvara några frågor.
 
+### Inlämning
+
+Den färdiga uppgiften lämnas in genom att lämna in filerna `part1_merge_files.py` och `part2_analyze_csv_file.py` på studentportalen.
+
 
 ## Del 1 - Sammanställ logfiler
 
-Varje köp som görs i en butik läggs till en logfil för den butiken. Loggfilen innehåller två sorters rader: Köp och ångrade köp.
+För varje köp som görs i en butik läggs en rad till en logfil för den butiken. Loggfilen innehåller två sorters rader: Köp och ångrade köp.
 Fälten i raderna är kommaseparerade, och alla fält (utom det första) är på formen `key=value`.
 
 Alla rader som loggar ett köp börjar med `sale,`
@@ -22,11 +26,12 @@ En rad kan se ut såhär för en medlem:
 Och för en icke medlem:
 `sale,id=24878294,time=2021-01-05T14:49:59+00:00,total_sek=50,member=False,birth_year=na`
 
+Key-value-fälten är:
 * Ett unikt id för köpet
 * Tiden för köpet
 * Summan av köpet i kr, utan decimaler
 * Om kunden är medlem i butiken. "True" eller "False"
-* Kundens födelseår, men enbart för om kunden är medlem, annars står istället "na"
+* Kundens födelseår, men enbart om kunden är medlem, annars står istället "na" (not available)
 
 Lösningen ska göras genom att göra klart filen `part1_merge_files.py`, som innehåller påbörjade funktioner.
 
